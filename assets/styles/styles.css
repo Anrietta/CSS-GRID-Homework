@@ -16,8 +16,6 @@
 }
 
 body {
-    position: relative;
-
     font-family: var(--text-main-font);
     font-size: var(--text-main-size);
     color: var(--text-main-color);
@@ -25,17 +23,7 @@ body {
     
 }
 
-.bcg-ellipse {
-    position: absolute;
-    background-color: #FBFAFE;
-    border: 1px solid #F0EBFA;
-    border-radius: 50%;
-    width: 3128px;
-    height: 3128px;
-    z-index: -1;
-    top: -135%;
-    left: -75%;
-}
+
 
 .page-header {
     display: flex;
@@ -51,15 +39,35 @@ body {
 }
 
 .nav-list {
+    position: relative;
     display: flex;
-    gap: 30px;
+    gap: 50px;
     flex-wrap: nowrap;
 }
 
-.nav-list:not(:nth-child(3)::after) {
+.nav-list :nth-child(1)::after {
+    content: '\203A';
+    color: var(--text-headers-color);
+    position: absolute;
+    transform: rotate(90deg) translateY(-50%);
 
 }
 
+.nav-list :nth-child(2)::after {
+    content: '\203A';
+    color: var(--text-headers-color);
+    position: absolute;
+    transform: rotate(90deg) translateY(-50%);
+
+}
+
+.nav-list :nth-child(4)::after {
+    content: '\203A';
+    color: var(--text-headers-color);
+    position: absolute;
+    transform: rotate(90deg) translateY(-50%);
+
+}
 
 .login-btn {
     color: #794CFF;
@@ -73,7 +81,20 @@ body {
 }
 
 .main-section {
+    position: relative;
     text-align: center;
+}
+
+.bcg-ellipse {
+    position: absolute;
+    background-color: #FBFAFE;
+    border: 1px solid #F0EBFA;
+    border-radius: 50%;
+    width: 250%;
+    height: 200%;
+    z-index: -1;
+    top: -120%;
+    left: -75%;
 }
 
 .main-section-info {
@@ -165,3 +186,4 @@ input {
     margin: 40px auto 70px auto;
     max-width: 80%;
 }
+
