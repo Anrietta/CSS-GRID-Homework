@@ -48,28 +48,11 @@ body {
     flex-wrap: nowrap;
 }
 
-.nav-list :nth-child(1)::after {
+.nav-list :not(:nth-child(3))::after {
     content: '\203A';
     color: var(--text-headers-color);
     position: absolute;
     transform: rotate(90deg) translateY(-50%);
-
-}
-
-.nav-list :nth-child(2)::after {
-    content: '\203A';
-    color: var(--text-headers-color);
-    position: absolute;
-    transform: rotate(90deg) translateY(-50%);
-
-}
-
-.nav-list :nth-child(4)::after {
-    content: '\203A';
-    color: var(--text-headers-color);
-    position: absolute;
-    transform: rotate(90deg) translateY(-50%);
-
 }
 
 .login-btn {
@@ -200,6 +183,10 @@ input {
     padding: 50px 20px;
 }
 
+.benefits-section-heading {
+    display: none;
+}
+
 .benefits-img {
     max-width: 657px;
     min-width: 384px;
@@ -225,6 +212,10 @@ input {
     border-left: 8px solid var(--main-brand-purple-color);
     border-top: none;
     background-color: #F6F3FC;
+}
+
+.benefits-list-item:hover + .benefits-list-item {
+    border-top: none;
 }
 
 .benefits-item-heading {
