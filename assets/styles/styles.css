@@ -99,7 +99,6 @@ body {
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
-    
 }
 
 .main-section-percentage {
@@ -118,7 +117,6 @@ body {
     color: var(--text-headers-color);
     margin: 25px auto 0 auto;
     width: 60%;
-
 }
 
 .main-section-descr {
@@ -226,5 +224,42 @@ input {
 }
 
 .benefits-item-descr {
+    line-height: 1.5rem;
+}
+
+.features-section {
+    padding: 70px 20px;
+}
+
+.features-section-heading {
+    font-size: var(--text-headers-size);
+    font-weight: var(--text-headers-font-weight);
+    color: var(--text-headers-color);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.features-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 340px));
+    justify-content: center;
+    gap: 70px;
+
+}
+
+.features-list-item {
+    padding: 0 15px;
+    width: 335px;
+}
+
+.features-list-item-heading {
+    color: var(--text-headers-color);
+    font-weight: var(--text-headers-font-weight);
+    font-size: 1.125rem;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.features-list-item-descr {
     line-height: 1.5rem;
 }
