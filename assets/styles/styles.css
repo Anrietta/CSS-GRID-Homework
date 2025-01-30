@@ -266,3 +266,48 @@ input {
 .features-list-item-descr {
     line-height: 1.5rem;
 }
+
+.preference-section {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    background-color: var(--sections-bcg-lightgrey-color);
+    border: var(--sections-bcg-border-properties);
+    padding: 50px 20px;
+}
+
+.preference-section-info {
+    width: 30%;
+    min-width: 380px;
+    padding: 15px;
+    align-self: center;
+}
+
+.preference-section-heading {
+    font-size: var(--text-headers-size);
+    line-height: 3rem;
+    font-weight: var(--text-headers-font-weight);
+    color: var(--text-headers-color);
+    margin-bottom: 15px;
+}
+
+.preference-section-descr {
+    line-height: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.preference-section-btn {
+    font-size: 1rem;
+    color: var(--btns-text-white-color);
+    background-color: var(--sections-brand-purple-color);
+    height: 52px;
+    border: none;
+    border-radius: 4px;
+    padding: 0 20px;
+}
+
+.preference-section-img {
+    width: 50%;
+    object-fit: contain;
+}
