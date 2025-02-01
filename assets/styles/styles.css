@@ -311,3 +311,107 @@ input {
     width: 50%;
     object-fit: contain;
 }
+
+.reviews-section {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.reviews-section-heading {
+    font-size: var(--text-headers-size);
+    line-height: 3rem;
+    font-weight: var(--text-headers-font-weight);
+    color: var(--text-headers-color);
+    margin-bottom: 50px;
+    max-width: 395px;
+    min-width: 320px;
+    margin: 0 auto 50px auto;
+}
+
+.reviews-section-text {
+    font-size: 1.125rem;
+    line-height: 2rem;
+    max-width: 540px;
+    min-width: 340px;
+    margin: 0 auto 40px auto;
+}
+
+.reviews-section-text::before {
+    content: '“';
+}
+
+.reviews-section-text::after {
+    content: '“';
+}
+
+.reviews-section-users-list {
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto 70px auto;
+}
+
+.reviews-section-user-item {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 15px;
+    grid-template-rows: repeat(2, auto);
+    text-align: left;
+    align-items: center;
+    position: relative;
+    padding: 0 15px;
+    width: calc(100% / 3 - 140px);
+}
+
+.reviews-section-user-item:hover::before{
+    content: '';
+    position: absolute;
+    top: -20px;
+    background-color: #35414B;
+    height: 4px;
+    width: 100%;
+}
+
+.reviews-section-user-photo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    grid-row: 1 / 3;
+}
+
+.reviews-section-user-name {
+    font-weight: var(--text-headers-font-weight);
+}
+
+.reviews-section-banner {
+    display: grid;
+    grid-template-columns: 40% 45%;
+    column-gap: 5%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--sections-brand-purple-color);
+    border-radius: 16px;
+    padding: 70px 80px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.reviews-section-banner-info {
+    display: inline;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: var(--text-headers-font-weight);
+    color: var(--btns-text-white-color);
+    padding-right: 15px;
+}
+
+.reviews-section-banner-apps {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.reviews-section-banner-apps a img {
+    border-radius: 8px
+}
