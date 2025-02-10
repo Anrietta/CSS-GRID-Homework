@@ -40,13 +40,26 @@
     }
 
     .nav-burger-mobile {
-        display: none;
-
+        /* display: none;
         position: absolute;
         height: 100vh;
         top: 0;
         bottom: 0;
         left: 0;
+        width: 0%;
+        color: var(--text-headers-color);
+        background-color: rgba(255, 255, 255, 0.98);
+        border-right: var(--sections-bcg-border-properties);
+        box-shadow: 0 5px 5px var(--text-headers-color);
+        padding: 40px 20px;
+        z-index: 1;
+        transition: width 2s ease; */
+        display: block;
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        bottom: 0;
+        left: -60%;
         width: 60%;
         color: var(--text-headers-color);
         background-color: rgba(255, 255, 255, 0.98);
@@ -54,6 +67,7 @@
         box-shadow: 0 5px 5px var(--text-headers-color);
         padding: 40px 20px;
         z-index: 1;
+        transition: left 1s ease-in;
     }
 
     .nav-mobile {
@@ -88,7 +102,7 @@
     }
 
     .nav-burger:hover .nav-burger-mobile {
-        display: block;
+        left: 0;
     }
 
     .login-btn {
@@ -124,7 +138,10 @@
         width: 319px;
         border-radius: 4px;
         margin: 10px auto 0 auto;
+    }
 
+    .main-section-input-btn:hover {
+        box-shadow: 0 0 3px #4E5A65;
     }
 
     .main-section-add-info {
@@ -157,11 +174,25 @@
         text-align: center;
     }
 
+    .benefits-list-item {
+        /* position: relative; */
+        border-left: none;
+    }
+
+    .benefits-list-item::after {
+        height: 8px;
+        width: 0;
+        transition: width 0.3s ease-in 0.2s;
+    }
 
     .benefits-list-item:hover {
         border-left: none;
-        border-bottom: 8px solid var(--main-brand-purple-color);
         border-radius: 8px 8px 0 0;
+    }
+
+    .benefits-list-item:hover.benefits-list-item::after {
+        width: 100%;
+        height: 8px;
     }
 
     .features-list {
@@ -229,6 +260,20 @@
         justify-items: center;
     }
 
+    .revies-section-user-item::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        background-color: #35414B;
+        height: 0;
+        width: 0;
+        transition: width 0.5s ease-in 0.2s;
+    }
+
+    .reviews-section-user-item:hover::before {
+        width: 0;
+    }
+
     .reviews-section-user-item:not(:nth-child(1)) {
         display: none;
     }
@@ -264,8 +309,15 @@
         width: inherit;
     }
 
+    .footer-info-hidden-item {
+        display: none;
+        font-size: 0;
+    }
+
     .footer-info-item:hover ~ .footer-info-hidden-item {
         display: block;
+        font-size: 16px;
+        animation: ani 0.5s linear;
     }
 
     .footer-info-item-heading-arrow::after {
@@ -277,10 +329,6 @@
         
         right: 50px;
         transform: rotate(90deg) translateY(-50%);
-    }
-
-    .footer-info-hidden-item {
-        display: none;
     }
 
     .footer-info-item-app-badge {
